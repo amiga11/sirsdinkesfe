@@ -412,18 +412,20 @@ const RL4ASebab = () => {
                     placeholder="catatan" value={catatan} onChange={e => changeHandlerCatatan(e)} />
                   <label htmlFor="floatingInputCatatan">Catatan Tidak Diterima</label>
                 </div> */}
-                <FloatingLabel label="Catatan :">
-                  <Form.Control
-                    as="textarea"
-                    name="catatan"
-                    placeholder="Leave a comment here"
-                    id="floatingInputCatatan"
-                    style={{ height: "64px" }}
-                    disabled={validateAccess}
-                    value={catatan}
-                    onChange={(e) => changeHandlerCatatan(e)}
-                  />
-                </FloatingLabel>
+                <div className="form-floating" style={{ width: "100%", display: "inline-block" }}>
+                  <FloatingLabel label="Catatan :">
+                    <Form.Control
+                      as="textarea"
+                      name="catatan"
+                      placeholder="Leave a comment here"
+                      id="floatingInputCatatan"
+                      style={{ height: "100px" }}
+                      disabled={validateAccess}
+                      value={catatan}
+                      onChange={(e) => changeHandlerCatatan(e)}
+                    />
+                  </FloatingLabel>
+                </div>
                 <div className="mt-3 mb-3">
                   <ToastContainer />
                   <button type="submit" disabled={buttonStatus} style={{ display: validateVisibility }} className="btn btn-outline-success"><HiSaveAs size={20} /> Simpan</button>
@@ -556,32 +558,32 @@ const RL4ASebab = () => {
                   No.
                 </th>
                 <th style={{ width: "3%", textAlign: "center", verticalAlign: "middle" }}>RL</th>
-                <th style={{ "width": "10%" }}>Nama RS</th>
+                <th style={{ width: "10%", textAlign: "center", verticalAlign: "middle" }}>Nama RS</th>
                 <th style={{ width: "3%", textAlign: "center", verticalAlign: "middle" }}>Tahun</th>
-                <th style={{ width: "7%", textAlign: "center", verticalAlign: "middle" }}>Kab/Kota</th>
-                <th style={{ textAlign: "left", wordBreak: "break-word", }}>GOLONGAN SEBAB PENYAKIT</th>
-                <th> 0 - 6hr Laki-laki</th>
-                <th> 0 - 6hr Perempuan</th>
-                <th> 7 - 28hr Laki-laki</th>
-                <th> 7 - 28hr Perempuan</th>
-                <th> 29hr - 1th Laki-laki</th>
-                <th> 29hr - 1th Perempuan</th>
-                <th> 1th - 4th Laki-laki</th>
-                <th> 1th - 4th Perempuan</th>
-                <th> 5th - 14th Laki-laki</th>
-                <th> 5th - 14th Perempuan</th>
-                <th> 15th - 24th Laki-laki</th>
-                <th> 15th - 24th Perempuan</th>
-                <th> 25th - 44th Laki-laki</th>
-                <th> 25th - 44th Perempuan</th>
-                <th> 45th - 64th Laki-laki</th>
-                <th> 45th - 64th Perempuan</th>
-                <th> lebih 65th Laki-laki</th>
-                <th> lebih 65th Perempuan</th>
-                <th>JUMLAH PASIEN LAKI-LAKI HIDUP/MATI </th>
-                <th>JUMLAH PASIEN PEREMPUAN HIDUP/MATI </th>
-                <th>JUMLAH PASIEN LAKI & PEREMPUAN HIDUP/MATI </th>
-                <th>JUMLAH PASIEN KELUAR MATI</th>
+                <th style={{ width: "10%", textAlign: "center", verticalAlign: "middle" }}>Kab/Kota</th>
+                <th style={{ width: "15%", textAlign: "center", verticalAlign: "middle" }}>Golongan Sebab Penyakit</th>
+                <th style={{ width: "10%", textAlign: "center", verticalAlign: "middle" }}> 0 - 6hr Laki-laki</th>
+                <th style={{ width: "10%", textAlign: "center", verticalAlign: "middle" }}> 0 - 6hr Perempuan</th>
+                <th style={{ width: "10%", textAlign: "center", verticalAlign: "middle" }}> 7 - 28hr Laki-laki</th>
+                <th style={{ width: "10%", textAlign: "center", verticalAlign: "middle" }}> 7 - 28hr Perempuan</th>
+                <th style={{ width: "10%", textAlign: "center", verticalAlign: "middle" }}> 29hr - 1th Laki-laki</th>
+                <th style={{ width: "10%", textAlign: "center", verticalAlign: "middle" }}> 29hr - 1th Perempuan</th>
+                <th style={{ width: "10%", textAlign: "center", verticalAlign: "middle" }}> 1th - 4th Laki-laki</th>
+                <th style={{ width: "10%", textAlign: "center", verticalAlign: "middle" }}> 1th - 4th Perempuan</th>
+                <th style={{ width: "10%", textAlign: "center", verticalAlign: "middle" }}> 5th - 14th Laki-laki</th>
+                <th style={{ width: "10%", textAlign: "center", verticalAlign: "middle" }}> 5th - 14th Perempuan</th>
+                <th style={{ width: "10%", textAlign: "center", verticalAlign: "middle" }}> 15th - 24th Laki-laki</th>
+                <th style={{ width: "10%", textAlign: "center", verticalAlign: "middle" }}> 15th - 24th Perempuan</th>
+                <th style={{ width: "10%", textAlign: "center", verticalAlign: "middle" }}> 25th - 44th Laki-laki</th>
+                <th style={{ width: "10%", textAlign: "center", verticalAlign: "middle" }}> 25th - 44th Perempuan</th>
+                <th style={{ width: "10%", textAlign: "center", verticalAlign: "middle" }}> 45th - 64th Laki-laki</th>
+                <th style={{ width: "10%", textAlign: "center", verticalAlign: "middle" }}> 45th - 64th Perempuan</th>
+                <th style={{ width: "10%", textAlign: "center", verticalAlign: "middle" }}> lebih 65th Laki-laki</th>
+                <th style={{ width: "10%", textAlign: "center", verticalAlign: "middle" }}> lebih 65th Perempuan</th>
+                <th style={{ width: "10%", textAlign: "center", verticalAlign: "middle" }}>Jumlah Pasien Laki-Laki Hidup/Mati </th>
+                <th style={{ width: "10%", textAlign: "center", verticalAlign: "middle" }}>Jumlah Pasien Perempuan Hidup/Mati </th>
+                <th style={{ width: "10%", textAlign: "center", verticalAlign: "middle" }}>Jumlah Pasien Laki & Perempuan Hidup/Mati </th>
+                <th style={{ width: "10%", textAlign: "center", verticalAlign: "middle" }}>Jumlah Pasien Keluar Mati</th>
               </tr>
             </thead>
             <tbody>

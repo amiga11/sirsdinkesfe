@@ -498,18 +498,20 @@ const RL38 = () => {
                     placeholder="catatan" value={catatan} onChange={e => changeHandlerCatatan(e)} />
                   <label htmlFor="floatingInputCatatan">Catatan Tidak Diterima</label>
                 </div> */}
-                <FloatingLabel label="Catatan :">
-                  <Form.Control
-                    as="textarea"
-                    name="catatan"
-                    placeholder="Leave a comment here"
-                    id="floatingInputCatatan"
-                    style={{ height: "64px" }}
-                    disabled={validateAccess}
-                    value={catatan}
-                    onChange={(e) => changeHandlerCatatan(e)}
-                  />
-                </FloatingLabel>
+                <div className="form-floating" style={{ width: "100%", display: "inline-block" }}>
+                  <FloatingLabel label="Catatan :">
+                    <Form.Control
+                      as="textarea"
+                      name="catatan"
+                      placeholder="Leave a comment here"
+                      id="floatingInputCatatan"
+                      style={{ height: "100px" }}
+                      disabled={validateAccess}
+                      value={catatan}
+                      onChange={(e) => changeHandlerCatatan(e)}
+                    />
+                  </FloatingLabel>
+                </div>
                 <div className="mt-3 mb-3">
                   <ToastContainer />
                   <button type="submit" disabled={buttonStatus} style={{ display: validateVisibility }} className="btn btn-outline-success"><HiSaveAs size={20} /> Simpan</button>
@@ -602,7 +604,7 @@ const RL38 = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div >
       <div className="row mt-3 mb-3">
         <div className="col-md-12">
           <div className="container" style={{ textAlign: "center" }}>
@@ -710,7 +712,7 @@ const RL38 = () => {
           </Table>
         </div>
       </div>
-    </div>
+    </div >
   );
 };
 export default RL38;
